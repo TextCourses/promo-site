@@ -1,0 +1,43 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          primary: '#2563EB',
+          'primary-dark': '#1D4ED8',
+          secondary: '#1E40AF',
+          accent: '#F59E0B',
+          'accent-dark': '#D97706',
+          text: '#111827',
+          muted: '#6B7280',
+          'muted-light': '#9CA3AF',
+          bg: '#FFFFFF',
+          'bg-alt': '#F9FAFB',
+          'bg-dark': '#0F172A',
+          border: '#E5E7EB',
+        },
+      },
+      fontFamily: {
+        heading: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.6s ease-out forwards',
+        'fade-in': 'fadeIn 0.4s ease-out forwards',
+      },
+    },
+  },
+  plugins: [],
+}

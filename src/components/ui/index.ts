@@ -1,0 +1,20 @@
+// Barrel re-exports for shadcn/ui atoms used in landing scaffold.
+// Атомы форкнуты из shadcn/ui (new-york v4), классы Tailwind заменены на
+// DS-токены проекта (см. styles/tokens.css, tailwind.config.ts).
+export * from "./accordion"
+export * from "./avatar"
+export * from "./badge"
+export * from "./button"
+export * from "./card"
+export * from "./checkbox"
+export * from "./dialog"
+export * from "./input"
+export * from "./label"
+export * from "./radio-group"
+export * from "./select"
+export * from "./separator"
+export * from "./sheet"
+export * from "./sonner"
+export * from "./tabs"
+export * from "./textarea"
+export * from "./tooltip"

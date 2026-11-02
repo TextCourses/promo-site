@@ -1,0 +1,38 @@
+{
+  "title": "Персональный план входа и роста в QA — TextCourses",
+  "description": "Ответьте на 4 вопроса за минуту и получите персональный чек-лист для входа или роста в QA: с чего начать и как развивать навыки в вашем темпе.",
+  "og_title": "Персональный план входа и роста в QA — TextCourses",
+  "og_description": "Ответьте на 4 вопроса за минуту и получите персональный чек-лист для входа или роста в QA: с чего начать и как развивать навыки в вашем темпе.",
+  "og_image_url": "",
+  "og_image_alt": "",
+  "og_image_type": "",
+  "og_image_width": "",
+  "og_image_height": "",
+  "favicon_url": "",
+  "twitter_card": "summary_large_image",
+  "robots": "index, follow",
+  "canonical_url": "https://text-courses.ru",
+  "theme_color": "",
+  "site_name": "TextCourses",
+  "lang": "ru",
+  "og_locale": "ru_RU",
+  "json_ld": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TextCourses"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TextCourses",
+      "description": "Ответьте на 4 вопроса за минуту и получите персональный чек-лист для входа или роста в QA: с чего начать и как развивать навыки в вашем темпе."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Персональный чек-лист для входа или роста в QA",
+      "description": "Персональный план входа или роста в QA, который формируется после ответов на 4 вопроса."
+    }
+  ]
+}

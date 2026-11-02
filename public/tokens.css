@@ -1,0 +1,43 @@
+/*
+ * tokens.css — заданы агентом-арт-директором (дизайн-система не выбрана).
+ *
+ * Палитра и шрифты синтезированы под продукт через tool set_design_tokens.
+ * Контракт переменных — тот же, что у base scaffold: tailwind.config.ts
+ * биндит классы к этим именам. Менять — только тем же tool'ом.
+ */
+
+:root {
+  --color-bg: #101415;
+  --color-surface: #171D1E;
+  --color-surface-warm: #1D2520;
+  --color-surface-2: #0C1011;
+
+  --color-fg: #EDF6F0;
+  --color-fg-2: #C6D1CB;
+  --color-muted: #92A098;
+  --color-meta: #718078;
+
+  --color-border: #2A3531;
+  --color-border-strong: #47554E;
+
+  --color-accent: #9DFF3A;
+  --color-accent-hover: #86DD2E;
+  --color-accent-on: #101415;
+  --color-accent-2: #3CA8FF;
+
+  --color-success: #64DD75;
+  --color-warn: #F1B84B;
+  --color-danger: #FF6B6B;
+  --color-focus-ring: #9DFF3A;
+
+  --font-display: 'Manrope', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-2xl: 16px;
+
+  --container-max: 1200px;
+}

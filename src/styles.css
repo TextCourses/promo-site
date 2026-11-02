@@ -1,0 +1,62 @@
+/*
+ * styles.css — entry-CSS для Tailwind utilities.
+ *
+ * Tokens.css (CSS-переменные DS) подключается отдельно через <link> в
+ * index.html, потому что должен быть доступен до загрузки JS. Здесь —
+ * только Tailwind-директивы, которые PostCSS превращает в utility-классы
+ * (`text-fg`, `bg-accent`, `mt-8`, и т.д.).
+ *
+ * Импортируется из main.tsx — без этого импорта Tailwind НЕ генерирует
+ * ни одного utility-класса (preflight тоже не подключается), и лендинг
+ * рендерится дефолтными браузерными стилями.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Балансировка заголовков — базовым слоем, а не «если агент вспомнит класс».
+ *
+ * ПОЧЕМУ ЗДЕСЬ. Без balance длинный H1 регулярно оставляет слово-«сироту» на
+ * последней строке, и это чинили жёстким разбиением заголовка на строки
+ * (массив строк + `whitespace-nowrap`). Такой «фикс» ломается при первой же
+ * смене ширины: подогнали под телефон — поехало на десктопе. Правило в
+ * `craft/typography.md` есть, но оно опционально для агента, поэтому дефолт
+ * задаётся здесь и достаётся каждому лендингу без участия модели.
+ *
+ * Специфичность — теговая, в слое `base`, поэтому ЛЮБОЙ utility-класс
+ * (`[text-wrap:initial]`, `text-pretty`) перебивает её без `!important`.
+ * Браузеры без поддержки `text-wrap: balance` просто игнорируют правило.
+ */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@keyframes hook-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.hook-float {
+  animation: hook-float 3.4s ease-in-out infinite;
+}
+
+@keyframes cta-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+
+.cta-pulse {
+  animation: cta-pulse 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hook-float,
+  .cta-pulse {
+    animation: none;
+  }
+}
