@@ -10,11 +10,11 @@ export const VISUAL_PLAN = {
   aestheticFamily: 'tech-precise-editorial',
   userDirectionRationale: 'Страница использует запланированные изображения как доказательство практики и держит фокус на персональном плане.',
   designSystemTranslation: 'Контрастные тёмные поверхности, зелёный для действия, синий для технического статуса, Manrope для заголовков и моноширинные строки для артефактов.',
-  heroConcept: 'Асимметричная сцена: оффер и путь к чек-листу на широкой текстовой части, интерфейс QA Compass — как единственное доказательство справа.',
+  heroConcept: 'Асимметричная сцена: оффер и путь к чек-листу на широкой текстовой части, интерфейс QA TEST MASTER — как единственное доказательство справа.',
   heroComposition: 'Асимметричная сетка 5/7 на широком экране, стек на телефоне.',
   heroAlternativesRationale: 'Фотофоном не используется: плотная копия и интерфейсный артефакт требуют отдельной безопасной зоны.',
   heroRationale: 'Главный экран сразу показывает результат, опыт автора и материальное доказательство практики.',
-  heroMediaRationale: 'Скриншот QA Compass показывает объект обучения, а не декоративную технологичность.',
+  heroMediaRationale: 'Скриншот QA TEST MASTER показывает объект обучения, а не декоративную технологичность.',
   referenceRationale: 'Ориентир — IDE, журнал инженерных решений и CI/CD-пайплайн, без копирования готовых интерфейсов.',
   compositionRules: ['Одна доминанта на сцену: обещание, риск или действие.', 'Карточки кода используют тонкие бордеры и моноширинные строки.', 'Сетки максимум в две колонки внутри узких областей.'],
   referencePack: [
@@ -23,7 +23,7 @@ export const VISUAL_PLAN = {
     { label: 'CI/CD console', pattern: 'Сигнальные статусы', borrow: 'Зелёный как маркер готовности', avoid: 'Декоративные анимации статусов' }
   ],
   mediaPlan: [
-    { slotId: 'hero.image_hero.0', kind: 'image', purpose: 'Доказать работу на реальном продукте', usage: 'proof', aspectRatio: '16:9', promptBrief: 'QA Compass, API и pytest', fallback: 'Стабильная IDE-заглушка' },
+    { slotId: 'hero.image_hero.0', kind: 'image', purpose: 'Доказать работу на реальном продукте', usage: 'proof', aspectRatio: '16:9', promptBrief: 'QA TEST MASTER, API и pytest', fallback: 'Стабильная IDE-заглушка' },
     { slotId: 'quiz.quiz_preview_image.0', kind: 'image', purpose: 'Показать ценность чек-листа', usage: 'inline', aspectRatio: '4:3', promptBrief: 'Инженерный документ навыков', fallback: 'Стабильная документная заглушка' }
   ],
   motionPlan: [
