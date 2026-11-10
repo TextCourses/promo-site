@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  base: '/',   // ← Вернули корень для работы на кастомном домене
   plugins: [react()],
   resolve: {
     alias: {

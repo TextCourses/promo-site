@@ -4,10 +4,8 @@
   <meta charset="utf-8">
   <title>Перенаправление...</title>
   <script>
-    // Этот скрипт перенаправляет все 404-запросы на главную страницу,
-    // сохраняя исходный путь в параметре 'p'.
     sessionStorage.redirect = location.href;
-    location.replace('/');
+    location.replace('/');   <!-- ← Перенаправляем в корень домена -->
   </script>
 </head>
 <body></body>
