@@ -50,6 +50,12 @@ function Header(): JSX.Element {
   </header>
 }
 
+function readYclid(): string | null {
+  if (typeof window === 'undefined') return null
+  const value = new URLSearchParams(window.location.search).get('yclid')
+  return value && /^\d{1,32}$/.test(value) ? value : null
+}
+
 function Quiz(): JSX.Element {
   const { currentQuestion, stepIndex, answers, answerQuestion, continueCurrentQuestion, goBack, isComplete } = useQuizFlow(questions)
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -62,9 +68,12 @@ function Quiz(): JSX.Element {
   const experience = answers.experience
   const isExperiencedManualQa = experience === 'Работаю ручным QA (Manual), хочу в автоматизацию'
   const route = isExperiencedManualQa ? 'skilled' : 'beginner'
+  const yclid = readYclid()
+  const startPayload = yclid ? `${route}_${yclid}` : route
+  const encodedStartPayload = encodeURIComponent(startPayload)
   const checklistLink = answers.channel === 'В МАХ'
-    ? `https://max.ru/se13836139_bot?start=${route}`
-    : `https://t.me/textcourses_group_bot?start=${route}`
+    ? `https://max.ru/se13836139_bot?start=${encodedStartPayload}`
+    : `https://t.me/textcourses_group_bot?start=${encodedStartPayload}`
   const messenger = answers.channel === 'В МАХ' ? 'max' : 'tg'
   const timeQuestion = questions.find(question => question.id === 'time')
   const timeIndex = timeQuestion ? (timeQuestion.options as readonly string[]).indexOf(String(answers.time ?? '')) : -1
